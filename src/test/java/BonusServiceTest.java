@@ -13,11 +13,12 @@ public class BonusServiceTest {
         long expected = 30;
 
         // вызываем целевой метод:
-        long actual = service.calculate(amount,registered);
+        long actual = service.calculate(amount, registered);
 
         //производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void shouldCalculateForRegisteredAndOverLimit() {
         BonusService service = new BonusService();
@@ -28,11 +29,12 @@ public class BonusServiceTest {
         long expected = 500;
 
         // вызываем целевой метод:
-        long actual = service.calculate(amount,registered);
+        long actual = service.calculate(amount, registered);
 
         //производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void shouldCalculateForNotRegisteredAndUnderLimit() {
         BonusService service = new BonusService();
@@ -43,11 +45,12 @@ public class BonusServiceTest {
         long expected = 10;
 
         // вызываем целевой метод:
-        long actual = service.calculate(amount,registered);
+        long actual = service.calculate(amount, registered);
 
         //производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void shouldCalculateForNotRegisteredAndOverLimit() {
         BonusService service = new BonusService();
@@ -58,10 +61,10 @@ public class BonusServiceTest {
         long expected = 500;
 
         // вызываем целевой метод:
-        long actual = service.calculate(amount,registered);
+        long actual = service.calculate(amount, registered);
 
         //производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 }
